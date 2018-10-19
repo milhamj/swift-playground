@@ -3,10 +3,11 @@
 //: ## Class
 //: ### an extensible program-code-template for creating objects, providing initial values for state (member variables) and implementations of behavior (member functions or methods) - Wikipedia
 class Vehicle {
-    var numberOfTires: Int?
-    var passengerCapacity: Int?
-    var name: String?
-
+    private var numberOfTires: Int?
+    fileprivate var engineType: String? //same file only
+    internal var passengerCapacity: Int? //same module only
+    public var name: String?
+    
     func drive() {
         print("ngeeengggg")
     }
@@ -22,7 +23,7 @@ class Vehicle {
 //: Challenge: let's discuss and make example of those concept
 class Car: Vehicle {
     func test() {
-        print(passengerCapacity)
+        print(passengerCapacity ?? 0)
     }
     
     override func drive() {
@@ -39,7 +40,7 @@ carVehicle.drive()
 
 
 //: ### AS, AS?, AS!
-let newCar: Any = Car()
+let newCar: Any = 245
 
 if let newVehicle = newCar as? Vehicle {
     newVehicle.drive()

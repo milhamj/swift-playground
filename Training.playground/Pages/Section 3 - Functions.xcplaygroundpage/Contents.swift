@@ -6,8 +6,8 @@ func greet(_ person: String, _ day: String) -> String {
     return "Hello \(person), today is \(day)"
 }
 
-func greet(person: String) -> String {
-    return "Hello \(person)"
+func greet(person: String = "Jon", withSalute: String = "pagi ini") -> String {
+    return "Hello \(person) \(withSalute)"
 }
 
 func greet(orang person: String) -> String {
@@ -15,22 +15,24 @@ func greet(orang person: String) -> String {
     return "ASD"
 }
 
-import UIKit
-func showError(from: UIViewController) {
-    
+greet(withSalute: "haha")
+
+//import UIKit
+//func showError(from: UIViewController) {
+
     
     // another code
     
 //    from.present(viewController, animated: true, completion: nil)
-}
+//}
 
-func showMessage(from: UIViewController) {
+//func showMessage(from: UIViewController) {
 //    from
-}
+//}
 
 var aaaa: [String] = ["haha","hihi","huhu", "hehe"]
 
-//aaaa.remove(at: 0)
+//aaaa.remove(at: 1)
 
 aaaa.index(of: "huhu")
 aaaa.index(after: 1)
@@ -64,14 +66,14 @@ func abc() -> Int {
 
 
 // tupple
-func calculateStats() -> (Int, Int, Int) { // mean, min, max {
-    return (1,2,3)
+func calculateStats() -> (Int, Int, Int?) { // mean, min, max {
+    return (1,2,nil)
 }
 
 let result = calculateStats()
 print(result.0)
 print(result.1)
-print(result.2)
+print(result.2 as Any)
 
 
 //: ## Function that return function

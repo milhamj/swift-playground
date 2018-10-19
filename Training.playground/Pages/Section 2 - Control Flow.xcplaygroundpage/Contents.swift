@@ -58,11 +58,15 @@ for element in array {
     print(element)
 }
 
+//EXCLUSIVE: 10 is not included for(int i=1; i<10; i++)
 for i in 1..<10 {
     print(i)
 }
 
-
+//INCLUSIVE: 10 is included for(int i=1; i<=10; i++)
+for i in 1...10 {
+    print(i)
+}
 
 
 //: ### while loop

@@ -15,7 +15,8 @@
 //: # Let's Start Small
 //: ### print statement
 //: every 3 or more blank lines means this is your space to jot something down as comment or start doing the code!
-
+var myString = "jago lu";
+print(myString.append("haha"));
 
 
 //: ### let vs var
